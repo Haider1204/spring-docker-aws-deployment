@@ -1,26 +1,26 @@
-\# Spring Boot Application - Docker \& AWS Deployment
+# Spring Boot Application - Docker \& AWS Deployment
 
 
 
-\## 📋 Table of Contents
+## 📋 Table of Contents
 
-\- \[Overview](#overview)
+- \[Overview](#overview)
 
-\- \[Architecture](#architecture)
+- \[Architecture](#architecture)
 
-\- \[Prerequisites](#prerequisites)
+- \[Prerequisites](#prerequisites)
 
-\- \[Local Development Setup](#local-development-setup)
+- \[Local Development Setup](#local-development-setup)
 
-\- \[Docker Deployment](#docker-deployment)
+- \[Docker Deployment](#docker-deployment)
 
-\- \[Docker Hub](#docker-hub)
+- \[Docker Hub](#docker-hub)
 
-\- \[AWS EC2 Deployment](#aws-ec2-deployment)
+- \[AWS EC2 Deployment](#aws-ec2-deployment)
 
-\- \[Testing](#testing)
+- \[Testing](#testing)
 
-\- \[Screenshots](#screenshots)
+- \[Screenshots](#screenshots)
 
 
 
@@ -28,7 +28,7 @@
 
 
 
-\## 🎯 Overview
+## 🎯 Overview
 
 
 
@@ -36,17 +36,17 @@ This project demonstrates a complete CI/CD workflow for deploying a Spring Boot 
 
 
 
-\*\*Key Features:\*\*
+**Key Features:**
 
-\- RESTful API built with Spring Boot
+- RESTful API built with Spring Boot
 
-\- Containerized using Docker
+- Containerized using Docker
 
-\- Multi-container orchestration with Docker Compose
+- Multi-container orchestration with Docker Compose
 
-\- Cloud deployment on AWS EC2
+- Cloud deployment on AWS EC2
 
-\- Scalable architecture supporting multiple instances
+- Scalable architecture supporting multiple instances
 
 
 
@@ -54,11 +54,11 @@ This project demonstrates a complete CI/CD workflow for deploying a Spring Boot 
 
 
 
-\## 🏗️ Architecture
+## 🏗️ Architecture
 
 
 
-\### Application Architecture
+### Application Architecture
 
 
 
@@ -102,23 +102,23 @@ This project demonstrates a complete CI/CD workflow for deploying a Spring Boot 
 
 
 
-\### Technology Stack
+### Technology Stack
 
 
 
-\- \*\*Backend\*\*: Spring Boot 3.3.3
+- **Backend**: Spring Boot 3.3.3
 
-\- \*\*Language\*\*: Java 17
+- **Language** Java 17
 
-\- \*\*Build Tool\*\*: Maven
+- **Build Tool**: Maven
 
-\- \*\*Containerization\*\*: Docker
+- **Containerization**: Docker
 
-\- \*\*Orchestration\*\*: Docker Compose
+- **Orchestration**: Docker Compose
 
-\- \*\*Cloud Platform\*\*: AWS EC2
+- **Cloud Platform**: AWS EC2
 
-\- \*\*Container Registry\*\*: Docker Hub
+- **Container Registry**: Docker Hub
 
 
 
@@ -126,7 +126,7 @@ This project demonstrates a complete CI/CD workflow for deploying a Spring Boot 
 
 
 
-\## ✅ Prerequisites
+## ✅ Prerequisites
 
 
 
@@ -134,19 +134,19 @@ Before starting, ensure you have the following installed:
 
 
 
-\- \*\*Java JDK 17+\*\*: \[Download here](https://adoptium.net/)
+- **Java JDK 17**: [Download here](https://adoptium.net/)
 
-\- \*\*Maven 3.6+\*\*: \[Download here](https://maven.apache.org/download.cgi)
+- **Maven 3.6**: [Download here](https://maven.apache.org/download.cgi)
 
-\- \*\*Docker Desktop\*\*: \[Download here](https://www.docker.com/products/docker-desktop/)
+- **Docker Desktop**: [Download here](https://www.docker.com/products/docker-desktop/)
 
-\- \*\*Git\*\*: \[Download here](https://git-scm.com/)
+- **Git**: [Download here](https://git-scm.com/)
 
-\- \*\*AWS Account\*\*: \[Sign up here](https://aws.amazon.com/)
+- **AWS Account**: [Sign up here](https://aws.amazon.com/)
 
 
 
-\### Verify Installations
+### Verify Installations
 
 
 
@@ -168,11 +168,11 @@ git --version
 
 
 
-\## 🚀 Local Development Setup
+## 🚀 Local Development Setup
 
 
 
-\### Step 1: Clone the Repository
+### Step 1: Clone the Repository
 
 
 
@@ -190,7 +190,7 @@ cd spring-docker-aws-deployment
 
 
 
-\### Step 2: Build the Project
+### Step 2: Build the Project
 
 
 
@@ -206,15 +206,15 @@ Expected output:
 
 ```
 
-\[INFO] BUILD SUCCESS
+[INFO] BUILD SUCCESS
 
-\[INFO] Total time: XX.XXX s
+[INFO] Total time: XX.XXX s
 
 ```
 
 
 
-\### Step 3: Run Locally (Without Docker)
+### Step 3: Run Locally (Without Docker)
 
 
 
@@ -226,11 +226,11 @@ java -cp "target/classes;target/dependency/\*" co.edu.escuelaing.dockerprimer.Re
 
 
 
-\*\*Note\*\*: On Linux/Mac use `:` instead of `;` in the classpath.
+**Note** On Linux/Mac use `:` instead of `;` in the classpath.
 
 
 
-\### Step 4: Test the Application
+### Step 4: Test the Application
 
 
 
@@ -262,11 +262,11 @@ Hello, Haider!
 
 
 
-\## 🐳 Docker Deployment
+## 🐳 Docker Deployment
 
 
 
-\### Build Docker Image
+### Build Docker Image
 
 
 
@@ -278,7 +278,7 @@ docker build --tag dockersparkprimer .
 
 
 
-\### Run Single Container
+### Run Single Container
 
 
 
@@ -290,7 +290,7 @@ docker run -d -p 34000:33025 --name myapp dockersparkprimer
 
 
 
-\### Run Multiple Containers
+### Run Multiple Containers
 
 
 
@@ -306,7 +306,7 @@ docker run -d -p 34002:33025 --name container3 dockersparkprimer
 
 
 
-\### Verify Running Containers
+### Verify Running Containers
 
 
 
@@ -318,7 +318,7 @@ docker ps
 
 
 
-\### Test Multiple Instances
+### Test Multiple Instances
 
 
 
@@ -338,7 +338,7 @@ http://localhost:34002/greeting?name=Instance3
 
 
 
-\## 🎼 Docker Compose
+## 🎼 Docker Compose
 
 
 
@@ -346,7 +346,7 @@ Docker Compose allows you to run multi-container applications with a single comm
 
 
 
-\### Start Services
+### Start Services
 
 
 
@@ -360,13 +360,13 @@ docker-compose up -d
 
 This creates:
 
-\- \*\*web\*\*: Spring Boot application container
+- **web**: Spring Boot application container
 
-\- \*\*db\*\*: MongoDB database container
+- **db**: MongoDB database container
 
 
 
-\### Stop Services
+### Stop Services
 
 
 
@@ -378,7 +378,7 @@ docker-compose down
 
 
 
-\### View Logs
+### View Logs
 
 
 
@@ -390,7 +390,7 @@ docker-compose logs -f web
 
 
 
-\### Test Docker Compose Deployment
+### Test Docker Compose Deployment
 
 
 
@@ -406,11 +406,11 @@ http://localhost:8087/greeting?name=DockerCompose
 
 
 
-\## 🐋 Docker Hub
+## 🐋 Docker Hub
 
 
 
-\### Login to Docker Hub
+### Login to Docker Hub
 
 
 
@@ -422,7 +422,7 @@ docker login
 
 
 
-\### Tag the Image
+### Tag the Image
 
 
 
@@ -434,7 +434,7 @@ docker tag dockersparkprimer YOUR\_DOCKERHUB\_USERNAME/firstsprkwebapprepo:lates
 
 
 
-\### Push to Docker Hub
+### Push to Docker Hub
 
 
 
@@ -446,7 +446,7 @@ docker push YOUR\_DOCKERHUB\_USERNAME/firstsprkwebapprepo:latest
 
 
 
-\### Pull from Docker Hub (on any machine)
+### Pull from Docker Hub (on any machine)
 
 
 
@@ -462,31 +462,31 @@ docker pull YOUR\_DOCKERHUB\_USERNAME/firstsprkwebapprepo:latest
 
 
 
-\## ☁️ AWS EC2 Deployment
+## ☁️ AWS EC2 Deployment
 
 
 
-\### Step 1: Launch EC2 Instance
+### Step 1: Launch EC2 Instance
 
 
 
-1\. Go to \*\*AWS Console\*\* → \*\*EC2\*\*
+1. Go to **AWS Console** → **EC2**
 
-2\. Click \*\*"Launch Instance"\*\*
+2. Click **Launch Instance**
 
-3\. Configure:
+3. Configure:
 
-&nbsp;  - \*\*AMI\*\*: Amazon Linux 2
+&nbsp;  - **AMI**: Amazon Linux 2
 
-&nbsp;  - \*\*Instance Type\*\*: t2.micro (Free tier eligible)
+&nbsp;  - **Instance Type**: t2.micro (Free tier eligible)
 
-&nbsp;  - \*\*Key Pair\*\*: Create or select existing
+&nbsp;  - **Key Pair**: Create or select existing
 
-&nbsp;  - \*\*Security Group\*\*: Allow SSH (port 22)
+&nbsp;  - **Security Group**: Allow SSH (port 22)
 
 
 
-\### Step 2: Connect to EC2 Instance
+### Step 2: Connect to EC2 Instance
 
 
 
@@ -498,7 +498,7 @@ ssh -i your-key.pem ec2-user@YOUR\_EC2\_PUBLIC\_IP
 
 
 
-\### Step 3: Install Docker on EC2
+### Step 3: Install Docker on EC2
 
 
 
@@ -516,11 +516,11 @@ sudo usermod -a -G docker ec2-user
 
 
 
-\*\*Logout and login again\*\* for group changes to take effect.
+**Logout and login again** for group changes to take effect.
 
 
 
-\### Step 4: Pull and Run Docker Image
+### Step 4: Pull and Run Docker Image
 
 
 
@@ -534,29 +534,29 @@ docker run -d -p 42000:33025 --name myapp YOUR\_DOCKERHUB\_USERNAME/firstsprkweb
 
 
 
-\### Step 5: Configure Security Group
+### Step 5: Configure Security Group
 
 
 
-1\. Go to \*\*EC2 Dashboard\*\* → \*\*Security Groups\*\*
+1. Go to **EC2 Dashboard** → **Security Groups**
 
-2\. Select your instance's security group
+2. Select your instance's security group
 
-3\. Click \*\*"Edit inbound rules"\*\*
+3. Click **"Edit inbound rules"**
 
-4\. Add rule:
+4. Add rule:
 
-&nbsp;  - \*\*Type\*\*: Custom TCP
+&nbsp;  - **Type** Custom TCP
 
-&nbsp;  - \*\*Port\*\*: 42000
+&nbsp;  - **Port** 42000
 
-&nbsp;  - \*\*Source\*\*: 0.0.0.0/0
+&nbsp;  - **Source** 0.0.0.0/0
 
-5\. Save rules
+5. Save rules
 
 
 
-\### Step 6: Test Deployment
+### Step 6: Test Deployment
 
 
 
@@ -594,11 +594,11 @@ Hello, CloudDeployment!
 
 
 
-\## 🧪 Testing
+## 🧪 Testing
 
 
 
-\### API Endpoints
+### API Endpoints
 
 
 
@@ -612,11 +612,11 @@ Hello, CloudDeployment!
 
 
 
-\### Testing Commands
+### Testing Commands
 
 
 
-\*\*Using curl:\*\*
+**Using curl:**
 
 ```bash
 
@@ -628,7 +628,7 @@ curl http://localhost:33025/greeting?name=TestUser
 
 
 
-\*\*Using PowerShell:\*\*
+**Using PowerShell:**
 
 ```powershell
 
@@ -642,43 +642,43 @@ Invoke-WebRequest -Uri "http://localhost:33025/greeting"
 
 
 
-\## 📸 Screenshots
+## 📸 Screenshots
 
 
 
-\### Local Development
+### Local Development
 
-!\[Local Development](screenshots/local-run.png)
-
-
-
-\### Docker Container Running
-
-!\[Docker Containers](screenshots/docker-ps.png)
+![Local Development](screenshots/local-run.png)
 
 
 
-\### Multiple Container Instances
+### Docker Container Running
 
-!\[Multiple Instances](screenshots/multiple-containers.png)
-
-
-
-\### Docker Hub Repository
-
-!\[Docker Hub](screenshots/dockerhub.png)
+![Docker Containers](screenshots/docker-ps.png)
 
 
 
-\### AWS EC2 Instance
+### Multiple Container Instances
 
-!\[EC2 Instance](screenshots/ec2-instance.png)
+![Multiple Instances](screenshots/multiple-containers.png)
 
 
 
-\### Application Running on AWS
+### Docker Hub Repository
 
-!\[AWS Deployment](screenshots/aws-running.png)
+![Docker Hub](screenshots/dockerhub.png)
+
+
+
+### AWS EC2 Instance
+
+![EC2 Instance](screenshots/ec2-instance.png)
+
+
+
+### Application Running on AWS
+
+![AWS Deployment](screenshots/aws-running.png)
 
 
 
@@ -686,7 +686,7 @@ Invoke-WebRequest -Uri "http://localhost:33025/greeting"
 
 
 
-\## 📊 Project Structure
+## 📊 Project Structure
 
 
 
@@ -724,25 +724,25 @@ dockerprimer/
 
 
 
-\## 🔧 Configuration Details
+## 🔧 Configuration Details
 
 
 
-\### Port Configuration
+### Port Configuration
 
 
 
-\- \*\*Application Internal Port\*\*: 33025
+- **Application Internal Port** 33025
 
-\- \*\*Docker Compose Port\*\*: 8087
+- **Docker Compose Port** 8087
 
-\- \*\*AWS EC2 Port\*\*: 42000
+- **AWS EC2 Port** 42000
 
-\- \*\*Local Testing Ports\*\*: 34000, 34001, 34002
+- **Local Testing Ports** 34000, 34001, 34002
 
 
 
-\### Environment Variables
+### Environment Variables
 
 
 
@@ -770,59 +770,6 @@ private static int getPort() {
 
 
 
-\## 🐛 Troubleshooting
-
-
-
-\### Issue: Docker daemon not running
-
-\*\*Solution\*\*: Start Docker Desktop and ensure it's running.
-
-
-
-\### Issue: Port already in use
-
-\*\*Solution\*\*: 
-
-```bash
-
-docker stop $(docker ps -q)
-
-```
-
-
-
-\### Issue: Cannot connect to EC2 instance
-
-\*\*Solution\*\*: Verify Security Group has port 42000 open for inbound traffic.
-
-
-
-\### Issue: Maven build fails
-
-\*\*Solution\*\*: Ensure Java 17+ is installed and JAVA\_HOME is set correctly.
-
-
-
----
-
-
-
-\## 📚 Additional Resources
-
-
-
-\- \[Spring Boot Documentation](https://spring.io/projects/spring-boot)
-
-\- \[Docker Documentation](https://docs.docker.com/)
-
-\- \[AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/)
-
-\- \[Maven Documentation](https://maven.apache.org/guides/)
-
-
-
----
 
 
 
